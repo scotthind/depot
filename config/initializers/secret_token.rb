@@ -1,0 +1,1 @@
+Depot::Application.config.secret_key_base = 'e3ba13f9a261f05a8d7c93962f03f14271c296224324072ef064dad5e084f4525f3e114b35a517bbecfd94ae699a4ac8c1dfeb897eab4b4cee334cdd50ecf285'
