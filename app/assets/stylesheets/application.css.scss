@@ -15,11 +15,14 @@
  */
 
 #banner {
-  background: #9c9;
+/*
+ background: #9c9;
+ */
+ background: #fcbdc5;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #b01528;
   text-align: center;
 
   img {
@@ -37,7 +40,7 @@
 }
 
 #columns {
-  background: #141;
+  background: #fcbdc5;
 
   #main {
     margin-left: 17em;
@@ -50,7 +53,7 @@
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #141;
+    background: #fcbdc5;
 
     form, div {
       display: inline;
@@ -62,7 +65,7 @@
 
     #cart {
       font-size: smaller;
-      color:     white;
+      color:     #b01528;
 
       table {
         border-top:    1px dotted #595;
@@ -78,7 +81,7 @@
         list-style: none;
 
         a {
-          color: #bfb;
+          color: #b01528;
           font-size: small;
         }
       }
