@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Priv Policies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store name</th>
+      <th>Policy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @priv_policies.each do |priv_policy| %>
+      <tr>
+        <td><%= priv_policy.store_name %></td>
+        <td><%= priv_policy.policy %></td>
+        <td><%= link_to 'Show', priv_policy %></td>
+        <td><%= link_to 'Edit', edit_priv_policy_path(priv_policy) %></td>
+        <td><%= link_to 'Destroy', priv_policy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Priv policy', new_priv_policy_path %>

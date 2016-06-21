@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :terms_of_services
+  resources :contact_us
+  resources :priv_policies
+  resources :about_us
   resources :line_items
   resources :carts
   get 'store/index'

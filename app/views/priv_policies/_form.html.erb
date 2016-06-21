@@ -1,0 +1,25 @@
+<%= form_for(@priv_policy) do |f| %>
+  <% if @priv_policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@priv_policy.errors.count, "error") %> prohibited this priv_policy from being saved:</h2>
+
+      <ul>
+      <% @priv_policy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :store_name %><br>
+    <%= f.text_field :store_name %>
+  </div>
+  <div class="field">
+    <%= f.label :policy %><br>
+    <%= f.text_area :policy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

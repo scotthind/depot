@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store name:</strong>
+  <%= @contact_u.store_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contact_u.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact_u.email %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @contact_u.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @contact_u.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @contact_u.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @contact_u.zip %>
+</p>
+
+<%= link_to 'Edit', edit_contact_u_path(@contact_u) %> |
+<%= link_to 'Back', contact_us_path %>

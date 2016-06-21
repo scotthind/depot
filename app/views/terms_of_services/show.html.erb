@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store name:</strong>
+  <%= @terms_of_service.store_name %>
+</p>
+
+<p>
+  <strong>Terms:</strong>
+  <%= @terms_of_service.terms %>
+</p>
+
+<%= link_to 'Edit', edit_terms_of_service_path(@terms_of_service) %> |
+<%= link_to 'Back', terms_of_services_path %>

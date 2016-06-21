@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store name:</strong>
+  <%= @priv_policy.store_name %>
+</p>
+
+<p>
+  <strong>Policy:</strong>
+  <%= @priv_policy.policy %>
+</p>
+
+<%= link_to 'Edit', edit_priv_policy_path(@priv_policy) %> |
+<%= link_to 'Back', priv_policies_path %>

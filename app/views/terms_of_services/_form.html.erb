@@ -1,0 +1,25 @@
+<%= form_for(@terms_of_service) do |f| %>
+  <% if @terms_of_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@terms_of_service.errors.count, "error") %> prohibited this terms_of_service from being saved:</h2>
+
+      <ul>
+      <% @terms_of_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :store_name %><br>
+    <%= f.text_field :store_name %>
+  </div>
+  <div class="field">
+    <%= f.label :terms %><br>
+    <%= f.text_area :terms %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

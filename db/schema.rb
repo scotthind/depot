@@ -11,9 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160613021146) do
+ActiveRecord::Schema.define(version: 20160621030301) do
+
+  create_table "about_us", force: :cascade do |t|
+    t.string   "store_name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contact_us", force: :cascade do |t|
+    t.string   "store_name"
+    t.text     "phone"
+    t.text     "email"
+    t.text     "street"
+    t.text     "city"
+    t.text     "state"
+    t.decimal  "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,13 +48,27 @@ ActiveRecord::Schema.define(version: 20160613021146) do
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
 
+  create_table "priv_policies", force: :cascade do |t|
+    t.string   "store_name"
+    t.text     "policy"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price",       precision: 8, scale: 2
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.decimal  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "terms_of_services", force: :cascade do |t|
+    t.string   "store_name"
+    t.text     "terms"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
