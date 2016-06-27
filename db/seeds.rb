@@ -68,8 +68,14 @@ Product.create!(title: 'The Beanie  ',
 PrivPolicy.delete_all
 PrivPolicy.create!(store_name: 'MSE WDB Training Room',
    policy:
-     %{<p>
-         You keep your privates to yourself, and we'll do the same.
-         <p>})
+     %{You keep your privates to yourself, and we'll do the same.}
+     )
+# . . . 
+
+TermsOfService.delete_all
+TermsOfService.create!(store_name: 'MSE WDB Training Room',
+   terms:
+     %{You pay us a lot of money.  We send you hipster stuff.}
+     )
 # . . . 
 

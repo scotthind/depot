@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Terms Of Services</h1>
+<h1>Terms Of Service</h1>
 
 <table>
   <thead>
@@ -16,9 +16,6 @@
       <tr>
         <td><%= terms_of_service.store_name %></td>
         <td><%= terms_of_service.terms %></td>
-        <td><%= link_to 'Show', terms_of_service %></td>
-        <td><%= link_to 'Edit', edit_terms_of_service_path(terms_of_service) %></td>
-        <td><%= link_to 'Destroy', terms_of_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +23,3 @@
 
 <br>
 
-<%= link_to 'New Terms of service', new_terms_of_service_path %>
