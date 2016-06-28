@@ -1,4 +1,6 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <h1>About Us</h1>
 
@@ -6,7 +8,6 @@
   <tbody>
     <% @about_us.each do |about_u| %>
       <tr>
-        <td><%= about_u.store_name %></td>
         <td><%= about_u.description %></td>
       </tr>
     <% end %>

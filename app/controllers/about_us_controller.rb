@@ -1,6 +1,7 @@
 class AboutUsController < ApplicationController
   before_action :set_about_u, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authorize
+  
   # GET /about_us
   # GET /about_us.json
   def index

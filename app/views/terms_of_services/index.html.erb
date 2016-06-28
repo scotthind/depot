@@ -1,24 +1,19 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <h1>Terms Of Service</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Store name</th>
-      <th>Terms</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	</thead>
 
-  <tbody>
-    <% @terms_of_services.each do |terms_of_service| %>
-      <tr>
-        <td><%= terms_of_service.store_name %></td>
-        <td><%= terms_of_service.terms %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<tbody>
+		<% @terms_of_services.each do |terms_of_service| %>
+		<tr>
+			<td><%= terms_of_service.terms %></td>
+		</tr>
+		<% end %>
+	</tbody>
 </table>
 
 <br>

@@ -1,5 +1,6 @@
 class TermsOfServicesController < ApplicationController
   before_action :set_terms_of_service, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize
 
   # GET /terms_of_services
   # GET /terms_of_services.json

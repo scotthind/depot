@@ -1,4 +1,6 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <h1>Privacy Policies</h1>
 
@@ -7,7 +9,6 @@
     <% @priv_policies.each do |priv_policy| %>
      <td class="list_description">
       <dl>
-        <dt><%= priv_policy.store_name %></dt>
         <dd><%= priv_policy.policy %></dd>
       </dl>
     </td>

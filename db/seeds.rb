@@ -3,7 +3,7 @@ Product.create!(title: 'Skinny Jeans',
   description: 
     %{<p>
         Do you wear really nice clothes yet not really have a job?  Then
-  our Hipster Skiiny Jeans are for you!  Works for hipster men or women,
+  our Hipster Skinny Jeans are for you!  Works for hipster men or women,
   although dudes probably wear them more.
       </p>},
   image_url:   'skinnyjeans.jpg',    
@@ -16,7 +16,7 @@ Product.create!(title: 'Scarf     ',
         Our Hipster scarves are for you.  Not just a fashion
         accessory, they literally protect your neck, and add that certain 
         je ne sais quoi when worn under a sportcoat or topcoat like a 
-        boss, like Al Capone. 
+        mob boss, like Al Capone. 
       </p>},
   image_url:   'scarf.jpg',    
   price: 58.00)
@@ -79,3 +79,40 @@ TermsOfService.create!(store_name: 'MSE WDB Training Room',
      )
 # . . . 
 
+AboutU.delete_all
+AboutU.create!(store_name: 'MSE WDB Training Room',
+   description:
+     %{Here at the MSE Training Room location of Hipster Haven, 
+       we love Hipsters.  Do you think you value independent thinking, 
+       counter-culture, progressive politics, and have an appreciation 
+       of art and indie-rock, creativity, intelligence, and witty 
+       banter, while others find you pretentious, overly trendy or effete?
+       Then buy our over-priced stuff !!!}
+     )
+# . . . 
+
+ContactU.delete_all
+ContactU.create!(store_name: 'MSE WDB Training Room',
+   phone:
+   %{856.291.2000},
+   email:
+   %{hipsterhaven@missionse.com},
+   street:
+   %{121 Whittendale Drive,},
+   city:
+   %{          Moorestown, },
+   state:
+   %{NJ },
+   zip:
+   %{08057} )
+# . . . 
+
+def User.digest(string)
+  BCrypt::Password.create(string)
+end
+
+User.delete_all
+User.create!(
+  name: 'scott',
+  password_digest: BCrypt::Password.create('seh123') )
+  # . . . 

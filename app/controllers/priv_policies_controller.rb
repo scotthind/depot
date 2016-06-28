@@ -1,5 +1,6 @@
 class PrivPoliciesController < ApplicationController
   before_action :set_priv_policy, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize
 
   # GET /priv_policies
   # GET /priv_policies.json

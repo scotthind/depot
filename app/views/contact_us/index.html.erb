@@ -1,34 +1,25 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <h1>Contact Us</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Store name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Street</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @contact_us.each do |contact_u| %>
       <tr>
-        <td><%= contact_u.store_name %></td>
-        <td><%= contact_u.phone %></td>
-        <td><%= contact_u.email %></td>
-        <td><%= contact_u.street %></td>
-        <td><%= contact_u.city %></td>
-        <td><%= contact_u.state %></td>
-        <td><%= contact_u.zip %></td>
-        <td><%= link_to 'Show', contact_u %></td>
-        <td><%= link_to 'Edit', edit_contact_u_path(contact_u) %></td>
-        <td><%= link_to 'Destroy', contact_u, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+        	Store   :   <%= contact_u.store_name %>
+        	</br>
+        	Phone   :   <%= contact_u.phone %>
+        	</br>
+        	Email   :   <%= contact_u.email %>
+        	</br>
+        	Address : <%= contact_u.street %>
+        			  <%= contact_u.city %>
+        			  <%= contact_u.state %>
+        			  <%= contact_u.zip %>
+        </td>
       </tr>
     <% end %>
   </tbody>
