@@ -9,9 +9,10 @@ Depot::Application.routes.draw do
   get "sessions/create"
   get "sessions/destroy"
   resources :users
-  resources :orders
-  resources :line_items
-  resources :carts
+  resources :priv_policies
+  resources :contact_us
+  resources :about_us
+  resources :terms_of_services
 
   get "store/index"
   resources :products do
@@ -22,8 +23,13 @@ Depot::Application.routes.draw do
   # first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
-  root 'store#index', as: 'store'
-  # ...
+ scope '(:locale)' do
+      resources :orders
+      resources :line_items
+      resources :carts
+      root 'store#index', as: 'store', via: :all
+    end
+ # ...
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
